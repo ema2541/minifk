@@ -24,9 +24,7 @@ spec:
       - image: emma2541/team21-client
         imagePullPolicy: Always
         name: team21-client
-        terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      securityContext: {}
       terminationGracePeriodSeconds: 30

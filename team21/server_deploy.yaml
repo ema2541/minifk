@@ -24,7 +24,6 @@ spec:
       - image: emma2541/team21-backend
         imagePullPolicy: Always
         name: team21-backend
-        terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
