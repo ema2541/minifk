@@ -2,14 +2,14 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: server
-  name: server
+    app: backend
+  name: backend
   namespace: default
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: server
+      app: backend
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,11 +18,11 @@ spec:
   template:
     metadata:
       labels:
-        app: server
+        app: backend
     spec:
       containers:
-      - image: emma2541/team21-backend
-        imagePullPolicy: Always
+      - image: pskrnreo/team21-backend:v0.2
+        imagePullPolicy: IfNotPresent
         name: team21-backend
       dnsPolicy: ClusterFirst
       restartPolicy: Always
