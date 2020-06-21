@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: source
+  name: source
+  uid: 4ab91471-d40b-4b73-8794-a23a450fb381
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: source
+  sessionAffinity: None
+  type: ClusterIP
