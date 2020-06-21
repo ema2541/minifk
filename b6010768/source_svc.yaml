@@ -4,7 +4,7 @@ metadata:
   labels:
     app: source
   name: source
-  uid: 4ab91471-d40b-4b73-8794-a23a450fb381
+  namespace: b6010768
 spec:
   ports:
   - port: 8080

@@ -4,19 +4,15 @@ metadata:
   labels:
     app: front
   name: front
-  namespace: default
+  namespace: b6010768
 spec:
   externalTrafficPolicy: Cluster
   ports:
   - nodePort: 32678
-    port: 8080
+    port: 9090
     protocol: TCP
     targetPort: 8080
   selector:
     app: front
   sessionAffinity: None
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 172.17.0.200
